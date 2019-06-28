@@ -4,15 +4,15 @@
     <%= image_tag @product.picture, class:'img-fluid'%>
   </div>
   <div class="col-md-6 position-static p-4 pl-md-0">
-    <h3 class="mt-0 text-center"><%= @product.name %></h3>
+    <h4 class="mt-0 text-center"><%= @product.name %></h4>
     <br>
-    <h4 class='mt-0'>Descripción:</h4>
+    <h5 class='mt-0'>Descripción:</h5>
     <p><%= @product.description %></p>
     <br>
-    <h4 class='mt-0'>Instrucciones de uso:</h4>
+    <h5 class='mt-0'>Instrucciones de uso:</h5>
     <p><%= @product.instructions %></p>
     <br>
-    <h4><%= "$#{@product.price}" %></h4>
+    <h5><%= "$#{@product.price}" %></h5>
     <a href="#" class="btn btn-success">Añadir al carro de compras </a>
   </div>
 </div>
