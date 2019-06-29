@@ -14,9 +14,9 @@
         <div class="col-md-6 blog">
           <p><%= story.content %></p>
           <p>
-            <%= @liked.length %>
+            <%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, like_path(story), method: :post %>
+            <%= @liked.where(story: story).length %>
           </p>
-          <%= link_to 'Me gusta', like_path(story), method: :post, class:'btn btn-success'%>
         </div>
   </div>
   <br>
