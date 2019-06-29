@@ -13,6 +13,10 @@
         </div>
         <div class="col-md-6 blog">
           <p><%= story.content %></p>
+          <p>
+            <%= @liked.length %>
+          </p>
+          <%= link_to 'Me gusta', like_path(story), method: :post, class:'btn btn-success'%>
         </div>
   </div>
   <br>
