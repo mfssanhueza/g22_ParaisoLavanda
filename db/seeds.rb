@@ -5,9 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Like.destroy_all
 Product.destroy_all
 Story.destroy_all
+User.destroy_all
+AdminUser.destroy_all
+
+AdminUser.create!(email: 'fernanda@mail.com', password: '1234567890', password_confirmation: '1234567890')
 
 15.times do |i|
   Product.create({
@@ -36,4 +40,3 @@ Story.create([
     picture: 'https://picsum.photos/id/104/700'
   }
   ])
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
