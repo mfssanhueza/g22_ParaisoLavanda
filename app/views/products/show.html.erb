@@ -13,6 +13,7 @@
     <p><%= @product.instructions %></p>
     <br>
     <h5><%= "$#{@product.price}" %></h5>
-    <a href="#" class="btn btn-success">Añadir al carro de compras </a>
+    <%= link_to 'Agregar al carro', shopping_carts_path(product_id: @product.id), method: :POST, class:'btn btn-success' %>
+
   </div>
 </div>

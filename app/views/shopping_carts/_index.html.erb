@@ -1,0 +1,26 @@
+<div class="col-md-2">
+  <h6>Carro de compras:</h6>
+  <% current_user.shopping_carts.each do |ele| %>
+    <div class="row">
+      <div class="col-md-2">
+        <%= link_to 'X', shopping_cart_path(ele), method: :delete, class:'stretched-link'%>
+      </div>
+      <div class="col-md-5">
+        <%= image_tag ele.product.picture, class:'card-img' %>
+      </div>
+      <div class="col-md-5">
+        <%= "$#{ele.product.price}" %>
+      </div>
+    </div>
+    <br>
+  <% end %>
+  <% total = locals[:products].pluck(:price).sum %>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Total:</p>
+    </div>
+    <div class="col-md-6 text-right">
+      <p><%="$#{total}"%></p>
+    </div>
+  </div>
+</div>

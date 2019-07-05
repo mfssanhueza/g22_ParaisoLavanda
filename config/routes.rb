@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post 'likes/:id/create', to: 'likes#create', as: 'like'
   resources :stories, only: [:index, :show]
   resources :products, only: [:index, :show]
+  resources :shopping_carts, only: [:create, :destroy]
 end

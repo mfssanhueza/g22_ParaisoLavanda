@@ -1,7 +1,7 @@
-<% @products.each_slice(4) do |products| %>
+<% @products.each_slice(3) do |products| %>
   <div class="row">
     <% products.each do |product| %>
-    <div class="col-md-3">
+    <div class="col-md-4">
       <div class="card">
         <%= image_tag product.picture, class:'img-fluid'%>
         <div class="card-body">
@@ -9,6 +9,8 @@
           <h5 class="text-right"><%= "$#{product.price}" %></h5>
           <p class="card-text"><%= "#{product.description[0..170]}..." %></p>
           <%= link_to 'Leer más', product_path(product), class:'stretched-link' %>
+          <br>
+          <%= link_to 'Agregar al carro', shopping_carts_path(product_id: product.id), method: :POST, class:'btn btn-sm btn-success' %>
         </div>
       </div>
     </div>
