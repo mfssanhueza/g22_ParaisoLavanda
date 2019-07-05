@@ -3,7 +3,9 @@
   <% current_user.shopping_carts.each do |ele| %>
     <div class="row">
       <div class="col-md-2">
-        <%= link_to 'X', shopping_cart_path(ele), method: :delete, class:'stretched-link'%>
+        <%= link_to '<i class="fas fa-minus-circle"></i>'.html_safe, shopping_cart_path(ele), method: :delete %>
+
+        <!-- <%= link_to 'X', shopping_cart_path(ele), method: :delete, class:'stretched-link'%> -->
       </div>
       <div class="col-md-5">
         <%= image_tag ele.product.picture, class:'card-img' %>
