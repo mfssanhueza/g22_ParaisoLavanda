@@ -8,9 +8,8 @@
           <h3 class="card-title"><%= product.name %></h3>
           <h5 class="text-right"><%= "$#{product.price}" %></h5>
           <p class="card-text"><%= "#{product.description[0..170]}..." %></p>
-          <%= link_to 'Leer más', product_path(product), class:'stretched-link' %>
-          <br>
-          <%= link_to 'Agregar al carro', shopping_carts_path(product_id: product.id), method: :POST, class:'btn btn-sm btn-success' %>
+          <p><%= link_to 'Leer más', product_path(product), class:'link' %></p>
+          <p><%= link_to 'Agregar al carro', shopping_carts_path(product_id: product.id), method: :POST, class:'btn btn-sm btn-success' %></p>
         </div>
       </div>
     </div>
