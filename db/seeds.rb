@@ -11,7 +11,6 @@ Story.destroy_all
 User.destroy_all
 AdminUser.destroy_all
 
-AdminUser.create!(email: 'fernanda@mail.com', password: '1234567890', password_confirmation: '1234567890')
 
 15.times do |i|
   Product.create({
