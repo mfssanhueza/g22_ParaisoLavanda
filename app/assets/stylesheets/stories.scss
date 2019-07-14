@@ -1,10 +1,9 @@
 // Place all the styles related to the Stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.img-blog{
-  border-radius: 8%;
+.story_index_picture{
+  max-height: 50vh;
 }
-
-.blog{
-  padding: 25px;
+.story_show_picture{
+  max-height: 100%;
 }

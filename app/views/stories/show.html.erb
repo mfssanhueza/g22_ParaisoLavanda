@@ -1,2 +1,39 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h4 class="card-title"><%= @story.title %></h2>
+    <h6 class="card-subtitle text-muted"><%= @story.subtitle %></h5>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= image_tag @story.picture, class:'img-fluid story_show_picture'%>
+    </div>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= @story.content %></p>
+    <% if @user_like.any? == false || @user_like.first.liked == false %>
+    <%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, like_path(@story), method: :post %>
+    <% elsif @user_like.first.liked %>
+    <%= link_to '<i class="fas fa-thumbs-up"></i>'.html_safe, like_path(@story), method: :post %>
+    <% end %>
 
-<%= @story %>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Productos sugeridos:</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6">
+        <%= link_to '<<Volver', stories_path, class:'card-link'%>
+      </div>
+      <div class="col-md-6">
+        <p class='text-right'>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
