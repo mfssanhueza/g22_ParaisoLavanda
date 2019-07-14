@@ -1,11 +1,5 @@
 class ShoppingCartsController < ApplicationController
   def index
-    @shopping_carts = []
-    ShoppingCart.all.each do |sc|
-      if sc.user = current_user
-        @shopping_carts.push(sc)
-      end
-    end
   end
 
   def create
