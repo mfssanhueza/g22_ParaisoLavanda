@@ -1,0 +1,8 @@
+
+$('.shopping_cart').prepend('<%=@shopping_cart%>')
+var total = parseInt($('#total').text());
+console.log(total)
+var shoppingCartPrice = parseInt("<%=@shopping_cart.product.price%>");
+var newTotal = total + shoppingCartPrice
+var newText = newTotal.toString()
+$('#totalContainer p').text(newText)

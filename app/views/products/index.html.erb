@@ -9,7 +9,7 @@
           <h5 class="text-right"><%= "$#{product.price}" %></h5>
           <p class="card-text"><%= "#{product.description[0..170]}..." %></p>
           <p><%= link_to 'Leer más', product_path(product), class:'link' %></p>
-          <p><%= link_to '<i class="fas fa-cart-plus"></i>'.html_safe, shopping_carts_path(product_id: product.id), method: :POST, class:'btn btn-sm btn-success' %></p>
+          <p><%= link_to '<i class="fas fa-cart-plus"></i>'.html_safe, shopping_carts_path(product_id: product.id), method: :POST, class:'btn btn-sm btn-success', data: { remote: true } %></p>
         </div>
       </div>
     </div>

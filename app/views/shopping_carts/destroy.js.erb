@@ -1,0 +1,14 @@
+$("#<%=@shopping_cart.id%>").fadeOut()
+var total = parseInt($('#total').text());
+console.log(total)
+var shoppingCartPrice = parseInt("<%=@shopping_cart.product.price%>");
+var newTotal = total - shoppingCartPrice
+var newText = newTotal.toString()
+$('#totalContainer p').text(newText)
+
+// var newHtml = newTotal.toString()
+// $('#total').text.replaceWith(newHtml);
+// console.log(newHtml);
+// console.log(newTotal)
+// console.log(jQuery.type(total));
+// $('#one span').text('Hi I am replace');
