@@ -9,31 +9,27 @@
     </div>
   </div>
   <div class="card-body">
-    <p class="card-text"><%= @story.content %></p>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="card-text"><%= @story_first_half %></p>
+      </div>
+      <div class="col-md-6">
+        <p class="card-text"><%= @story_second_half%></p>
+      </div>
+    </div>
+    <br>
     <% if @user_like.any? == false || @user_like.first.liked == false %>
-    <%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, like_path(@story), method: :post %>
+      <%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, like_path(@story), method: :post %>
     <% elsif @user_like.first.liked %>
-    <%= link_to '<i class="fas fa-thumbs-up"></i>'.html_safe, like_path(@story), method: :post %>
+      <%= link_to '<i class="fas fa-thumbs-up"></i>'.html_safe, like_path(@story), method: :post %>
     <% end %>
-
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Productos sugeridos:</li>
     <li class="list-group-item">Dapibus ac facilisis in</li>
     <li class="list-group-item">Vestibulum at eros</li>
   </ul>
-  <div class="card-body">
-    <div class="row">
-      <div class="col-md-6">
-        <%= link_to '<<Volver', stories_path, class:'card-link'%>
-      </div>
-      <div class="col-md-6">
-        <p class='text-right'>
-        </p>
-      </div>
-    </div>
-  </div>
   <div class="card-footer text-muted">
-    2 days ago
+    <%= link_to '<<Volver', stories_path, class:'card-link'%>
   </div>
 </div>

@@ -43,7 +43,7 @@
             <%= link_to 'Artículo completo', story_path(story), class:'card-link' %>
           </div>
           <div class="col-md-6">
-            <p class='text-right'><%= story.likes.length %> <i class="fas fa-thumbs-up"></i></p>
+            <p class='text-right'><%= story.likes.where(liked: true).length %> <i class="fas fa-thumbs-up"></i></p>
 
           </div>
         </div>
