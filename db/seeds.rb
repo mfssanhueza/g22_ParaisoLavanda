@@ -5,7 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Like.destroy_all
+ShoppingCart.destroy_all
 Story.destroy_all
+Product.destroy_all
+User.destroy_all
 
 15.times do |i|
   Product.create({
